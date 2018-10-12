@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SmallILang</string>
+    <string name="app_name">点实成金</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
 
@@ -94,11 +94,18 @@
     <string name="section_format">Hello World from section: %1$d</string>
 
 
-    <string name="home_button_home">HOME</string>
+    <!--<string name="home_button_home">HOME</string>-->
+    <!--<string name="home_button_rank">RAND</string>-->
+    <!--<string name="home_button_game">GAME</string>-->
+    <!--<string name="home_button_kind">KIND</string>-->
+    <!--<string name="home_button_me">MINE</string>-->
+    <!--<string name="home_button_create">CREATE</string>-->
+
+    <string name="home_button_home">首页</string>
     <string name="home_button_rank">RAND</string>
-    <string name="home_button_game">GAME</string>
-    <string name="home_button_kind">KIND</string>
-    <string name="home_button_me">MINE</string>
-    <string name="home_button_create">CREATE</string>
+    <string name="home_button_game">奇点</string>
+    <string name="home_button_kind">好友动态</string>
+    <string name="home_button_me">我的</string>
+    <string name="home_button_create">分类</string>
 
 </resources>

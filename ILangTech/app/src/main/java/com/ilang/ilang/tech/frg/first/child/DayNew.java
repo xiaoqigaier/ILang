@@ -1,34 +1,20 @@
 package com.ilang.ilang.tech.frg.first.child;
 
-import android.content.Context;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.view.View;
-
-import com.ilang.ilang.tech.R;
-import com.ilang.ilang.tech.adapter.MyRecyclerViewAdapter;
 import com.ilang.ilang.tech.model.IdeaBean;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class DayNew {
-    private Context context;
-    private View view;
 
-    public DayNew(Context context, View view) {
-        this.context = context;
-        this.view = view;
-        initView(view);
+    public DayNew(List<IdeaBean> list) {
+        initView(list);
     }
 
-    private void initView(View view) {
-        RecyclerView mRecyclerView = view.findViewById(R.id.frg_first_recyclerView);
-        //设置RecyclerView管理器
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
+    private void initView(List<IdeaBean> list) {
 
-        List<IdeaBean> list = new ArrayList<>();
+        if(list==null){
+            return;
+        }
+
         IdeaBean ideaBean1 = new IdeaBean();
         ideaBean1.setDataType(0);
         IdeaBean ideaBean2 = new IdeaBean();
@@ -46,11 +32,6 @@ public class DayNew {
         list.add(ideaBean3);
         list.add(ideaBean4);
 
-        //初始化适配器
-        MyRecyclerViewAdapter mAdapter = new MyRecyclerViewAdapter(context, list);
-        //设置添加或删除item时的动画，这里使用默认动画
-        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
-        mRecyclerView.setAdapter(mAdapter);
     }
 
 
